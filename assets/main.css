@@ -1,0 +1,540 @@
+html{
+    font-size:62.5%
+}
+html,body{
+    font-family:"SF Pro Text", "SF Pro Icons", 'Segoe UI', SegoeUI, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    margin:0;
+    padding:0
+}
+header{
+    width:100%;
+    max-width:118rem;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column
+}
+header nav{
+    display:flex;
+    justify-content:flex-end;
+    margin:2rem 0 0 0
+}
+header nav a{
+    margin-right:2rem;
+    text-decoration:none;
+    position:relative;
+    color:#414142;
+    font-size:1.4rem
+}
+header nav a:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:0.2rem;
+    bottom:0;
+    left:0;
+    visibility:hidden;
+    -webkit-transform:scaleX(0);
+    transform:scaleX(0);
+    -webkit-transition:all 0.3s ease-in-out 0s;
+    transition:all 0.3s ease-in-out 0s
+}
+header nav a.selected:before,header nav a:hover:before{
+    visibility:visible;
+    -webkit-transform:scaleX(1);
+    transform:scaleX(1)
+}
+header nav a:hover{
+    color:#2d2d2e
+}
+header nav a:hover:before{
+    background-color:#2d2d2e
+}
+header nav a.selected{
+    color:#000
+}
+header nav a.selected:before{
+    background-color:#000
+}
+header nav a:last-child{
+    margin-right:0
+}
+header h1{
+    font-size:8rem;
+    color:#414142;
+    margin:4rem 0 0 0;
+    padding: 0 0 0 8rem;
+    font-weight:400;
+    text-transform:uppercase;
+    background-image:url("logo-128x128.png");
+    background-position:left center;
+    background-repeat:no-repeat
+}
+header h1:first-letter{
+    visibility:hidden;
+    color:transparent
+}
+header h2{
+    font-weight:300;
+    color:#414142;
+    font-size:5rem;
+    margin:0;
+    padding:0;
+    position:relative
+}
+header h2:after{
+    content:'';
+    height:0.2rem;
+    width:10.5rem;
+    background-color:#414142;
+    display:block;
+    position:absolute;
+    left:1.4rem;
+    bottom:0
+}
+main{
+    display:flex;
+    width:100%;
+    max-width:118rem;
+    margin:0 auto
+}
+main section{
+    width:100%;
+    position:relative
+}
+main article h3{
+    border-style:solid;
+    height:0;
+    width:25rem;
+    color:white;
+    border-color:transparent transparent black transparent;
+    border-width:0 4rem 4rem 0;
+    font-size:2rem;
+    font-weight:400;
+    padding:0 0 0 2rem;
+    margin:4rem 0 1rem 0;
+    line-height:4rem
+}
+main article h3:after{
+    content:'';
+    position:absolute;
+    left:0;
+    top:4rem;
+    height:0.2rem;
+    width:100%;
+    background-color:#000;
+    display:block
+}
+main article p{
+    font-size:1.4rem;
+    color:#414142
+}
+main h4{
+    font-size:1.6rem
+}
+main h4 span{
+    display:none
+}
+.column-holder{
+    display:flex;
+    width:100%;
+    position:relative;
+    flex-direction:row;
+    justify-content:flex-start
+}
+.column-holder .column.specialities{
+    width:41rem;
+    margin:0 4rem 0 0
+}
+.column-holder .column.domains{
+    width:69rem;
+    margin:0 0 0 4rem
+}
+.column-holder .column:last-child{
+    margin-right:0
+}
+.column-holder .column ul li{
+    font-size:1.4rem;
+    height:2rem;
+    line-height:2rem
+}
+.company-holder{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    color:#414142;
+    transition:0.5s
+}
+.company-holder .title{
+    width:41rem;
+    margin:0 4rem 0 0;
+    position:relative
+}
+.company-holder .title:after{
+    content:'';
+    width:0.1rem;
+    height:3rem;
+    background-color:rgba(0,0,0,0.35);
+    position:absolute;
+    display:block;
+    right:-4.1rem;
+    bottom:-3rem;
+    transition:0.5s
+}
+.company-holder .title:last-child .company-holder .title:after{
+    display:none
+}
+.company-holder .company{
+    width:69rem;
+    margin:0 0 0 4rem;
+    font-size:1.4rem;
+    position:relative
+}
+.company-holder .company:before{
+    content:'';
+    width:0.1rem;
+    height:calc(100% - 4rem);
+    background-color:rgba(0,0,0,0.35);
+    position:absolute;
+    left:-4rem;
+    bottom:0;
+    transition:0.5s
+}
+.company-holder .company:after{
+    content:'';
+    width:1.2rem;
+    height:1.2rem;
+    border-radius:0.6rem;
+    border:0.1rem rgba(0,0,0,0.35) solid;
+    display:block;
+    position:absolute;
+    left:-4.65rem;
+    top:2.5rem;
+    background-color:white;
+    transition:0.5s
+}
+.company-holder .company ul li a,.company-holder .company h4 a{
+    text-decoration:none;
+    position:relative;
+    color:#414142
+}
+.company-holder .company ul li a:before,.company-holder .company h4 a:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:0.1rem;
+    bottom:0;
+    left:0;
+    visibility:hidden;
+    -webkit-transform:scaleX(0);
+    transform:scaleX(0);
+    -webkit-transition:all 0.3s ease-in-out 0s;
+    transition:all 0.3s ease-in-out 0s
+}
+.company-holder:hover{
+    color:#000080
+}
+.company-holder:hover p{
+    color:#000080
+}
+.company-holder:hover h4 a,.company-holder:hover ul li a{
+    color:#000080
+}
+.company-holder:hover h4 a:before,.company-holder:hover ul li a:before{
+    visibility:visible;
+    -webkit-transform:scaleX(1);
+    transform:scaleX(1);
+    background-color:#000080
+}
+.company-holder:hover h4{
+    font-weight:bold
+}
+.company-holder:hover .title::after,.company-holder:hover .company::before,.company-holder:hover .company::after{
+    background-color:#000080
+}
+.company-holder:hover .company::after{
+    border-color:#000080
+}
+.recommendation-holder{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    margin:0 0 2rem 0
+}
+.recommendation-holder:last-child{
+    margin-bottom:0
+}
+.recommendation-holder .author{
+    width:41rem;
+    margin:0 4rem 0 0;
+    position:relative
+}
+.recommendation-holder .author .name,.recommendation-holder .author .job-title,.recommendation-holder .author .relationship{
+    text-align:center
+}
+.recommendation-holder .author .name{
+    font-weight:bold
+}
+.recommendation-holder .author .name img{
+    display:block;
+    width:10rem;
+    height:10rem;
+    border-radius:5rem;
+    position:relative;
+    margin:0 auto 2rem auto;
+    box-shadow:3px 3px 1px rgba(0,0,0,0.35)
+}
+.recommendation-holder .recommendation{
+    width:69rem;
+    margin:0 0 0 4rem;
+    font-size:1.4rem;
+    position:relative;
+    padding:2rem 0 0 0
+}
+.recommendation-holder .recommendation p:first-child{
+    position:relative
+}
+.recommendation-holder .recommendation p:first-child:before{
+    display:block;
+    position:absolute;
+    font-size:6rem;
+    color:#414142;
+    content:"\201C";
+    top:-3rem;
+    left:-3rem
+}
+.recommendation-holder .recommendation p:last-child{
+    position:relative
+}
+.recommendation-holder .recommendation p:last-child:after{
+    display:block;
+    position:absolute;
+    content:"\201E";
+    right:0;
+    bottom:-2rem;
+    font-size:6rem;
+    color:#414142
+}
+.general-link{
+    text-decoration:none;
+    position:relative;
+    color:#414142
+}
+.general-link:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:0.2rem;
+    bottom:0;
+    left:0;
+    visibility:hidden;
+    -webkit-transform:scaleX(0);
+    transform:scaleX(0);
+    -webkit-transition:all 0.3s ease-in-out 0s;
+    transition:all 0.3s ease-in-out 0s
+}
+.general-link.selected:before,.general-link:hover:before{
+    visibility:visible;
+    -webkit-transform:scaleX(1);
+    transform:scaleX(1)
+}
+.general-link:hover{
+    color:#2d2d2e
+}
+.general-link:hover:before{
+    background-color:#2d2d2e
+}
+footer{
+    display:flex;
+    margin:0 auto;
+    width:100%;
+    max-width:118rem;
+    padding:0;
+    height:2rem
+}
+.job-date{
+    font-size:1.2rem;
+    display:none
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    header,main{
+        max-width:100%
+    }
+    header nav a:last-child{
+        margin-right:2rem
+    }
+    header h1,header h2{
+        margin-left:2rem
+    }
+    main article p{
+        padding-left:2rem;
+        padding-right:2rem
+    }
+    .column-holder{
+        justify-content:flex-start
+    }
+    .column-holder .column.specialities,.column-holder .column.domains{
+        width:auto;
+        max-width:calc(50% - 4rem)
+    }
+    .column-holder .column.specialities{
+        margin:0 0 0 2rem
+    }
+    .column-holder .column.specialities h4{
+        margin:2rem 0
+    }
+    .company ul,.column-holder .column ul{
+        margin:0;
+        padding:0 0 0 3rem
+    }
+    .company ul li,.column-holder .column ul li{
+        height:auto
+    }
+    .company-holder .title{
+        width:20.4rem;
+        margin:0 0 0 2rem
+    }
+    .company-holder .company{
+        width:calc(100% - 24.4rem);
+        margin:0 2rem 0 2rem
+    }
+    main article .company-holder .title p{
+        padding:0
+    }
+    main article .company-holder .title:after{
+        right:-1.1rem
+    }
+    main article .company-holder .company h4{
+        margin-left:2rem
+    }
+    main article .company-holder .company:before{
+        left:-1rem
+    }
+    main article .company-holder .company:after{
+        left:-1.7rem
+    }
+    .recommendation-holder .author,.recommendation-holder .recommendation{
+        width:auto
+    }
+    .recommendation-holder .author{
+        margin:0 2rem
+    }
+    .recommendation-holder .recommendation{
+        margin:0 2rem 0 0;
+        display:flex;
+        justify-content:center;
+        flex-direction:column
+    }
+    .recommendation-holder .recommendation p:first-child:before{
+        left:-1rem;
+        top:-2.5rem
+    }
+}
+@media (max-width: 767px){
+    header,main{
+        max-width:100%
+    }
+    header nav{
+        margin-top:1rem
+    }
+    header nav a,header nav a:last-child{
+        margin-right:1rem
+    }
+    header h1{
+        font-size:3.2rem;
+        margin-left:1rem;
+        margin-top:3rem;
+        padding-left: 3.6rem;
+        background-image:url("logo-48x48.png")
+    }
+    header h2{
+        font-size:2.4rem;
+        margin-left:1rem
+    }
+    header h2:after{
+        height:0.2rem;
+        width:5rem;
+        left:0.6rem
+    }
+    main article h3{
+        font-size:1.5rem;
+        line-height:2.65rem;
+        border-width:0 3rem 3rem 0;
+        margin:3rem 0 1rem 0;
+        padding:0 0 0 1rem;
+        width:18rem
+    }
+    main article h3:after{
+        top:3rem
+    }
+    main article p{
+        padding-left:1rem;
+        padding-right:1rem;
+        font-size:1.2rem
+    }
+    .column-holder{
+        flex-direction:column
+    }
+    .column-holder .column.specialities,.column-holder .column.domains{
+        width:100%;
+        margin:0
+    }
+    .company-holder{
+        flex-direction:column;
+        border-bottom:0.05rem dashed #414142;
+        margin-bottom:1.6rem
+    }
+    .company-holder:last-child{
+        border-bottom:none;
+        margin-bottom:0
+    }
+    .company-holder .title,.company-holder .company{
+        width:100%;
+        margin:0
+    }
+    .company-holder .title{
+        display:none
+    }
+    main h4{
+        padding:0 0 0 1rem;
+        margin:0
+    }
+    main h4 span{
+        display:inline
+    }
+    .company ul,.column-holder .column ul{
+        margin:0;
+        padding:1.2rem 0 0 3rem
+    }
+    .company ul li,.column-holder .column ul li{
+        font-size:1.2rem;
+        line-height:1.4rem;
+        height:auto;
+        margin-bottom:1.2rem
+    }
+    .job-date{
+        display:block
+    }
+    .question{
+        font-weight:600
+    }
+    .recommendation-holder{
+        margin:0;
+        flex-direction:column
+    }
+    .recommendation-holder .recommendation,.recommendation-holder .author{
+        width:100%;
+        margin:0;
+        padding:0
+    }
+    .recommendation-holder .recommendation p:first-child:before{
+        left:0.2rem;
+        top:-0.5rem;
+        font-size:2.2rem
+    }
+    .recommendation-holder .recommendation p:last-child:after{
+        font-size:2.2rem;
+        bottom:-0.2rem;
+        right:1rem
+    }
+}
+ 
